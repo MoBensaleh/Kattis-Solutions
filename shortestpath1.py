@@ -31,13 +31,12 @@ while True:
         u, v, w = map(int, input().split())
         edges[u].append((v, w))
 
-    # Call the dijkstra function to find the shortest path
+    # Call the Dijkstra function to find the shortest path
     # from the source vertex to every other vertex in the graph
     dist = dijkstra(n, edges, s)
 
     for _ in range(q):
         query = int(input())
-
         # If the query vertex is reachable from the source vertex,
         # print the shortest distance from the source vertex to the query vertex
         if dist[query] != float("inf"):
